@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decoraciones Marianita</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Decoraciones Marianita</h1><img src="Imagenesss/logo.png" class="logo-img">
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#paquetes">Paquetes</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Haz tu fiesta inolvidable</h2>
+    <p>Decoraciones creativas y personalizadas para cualquier ocasión</p>
+    <button onclick="alert('Solicita tu cotización!')">Cotiza ahora</button>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="cards">
+    <h2>Servicios</h2>
+    <div class="card" data-category="globos">
+      <h3>Arcos y columnas de globos</h3>
+      <p>Diseños coloridos y personalizados.</p>
+    </div>
+    <div class="card" data-category="mesas">
+      <h3>Mesas temáticas</h3>
+      <p>Decoración completa para tu evento.</p>
+    </div>
+    <div class="card" data-category="backdrops">
+      <h3>Backdrops</h3>
+      <p>Fondos espectaculares para fotos.</p>
+    </div>
+  </section>
+
+  <!-- Paquetes -->
+  <section id="paquetes" class="packages">
+    <h2>Paquetes</h2>
+    <div class="package">
+      <h3>Básico</h3>
+      <p>Decoración sencilla con globos y mesa principal.</p>
+      <p><strong>$2500 MXN</strong></p>
+    </div>
+    <div class="package">
+      <h3>Premium</h3>
+      <p>Incluye globos, mesa temática y backdrop.</p>5
+      <p><strong>$300 MXN</strong></p>
+    </div>
+    <div class="package">
+      <h3>Deluxe</h3>
+      <p>Decoración completa con iluminación y extras.</p>
+      <p><strong>$5000 MXN</strong></p>
+    </div>
+  </section>
+
+  <!-- Galería -->
+ <section id="galeria" class="gallery-section">
+  <h2>Galería de eventos</h2>
+  <div class="gallery-container">
+    <!-- Carrusel -->
+    <div class="carousel">
+      <div class="carousel-slide active"><img src="Imagenesss/1_1.jpg" alt="Evento 1"></div>
+      <div class="carousel-slide"><img src="Imagenesss/1_2.jpg" alt="Evento 2"></div>
+      <div class="carousel-slide"><img src="Imagenesss/1_3.jpg" alt="Evento 3"></div>
+      <div class="carousel-slide"><img src="Imagenesss/1_3.jpg" alt="Evento 3"></div>
+      <div class="carousel-slide"><img src="Imageness/1.jpg" alt="Evento 3"></div>
+    </div>
+
+    <!-- Mini-galería lateral -->
+    <button onclick="toggleGallery()">Explorar más</button>
+    
+<div id="extraGallery" style="display:none;" class="grid-gallery">
+      <h3>Explora más fotos</h3>
+      <img src="Imagenesss/1_1.jpg" alt="Extra 1" onclick="openModal(this)">
+      <img src="Imagenesss/1_2.jpg" alt="Extra 2" onclick="openModal(this)">
+      <img src="Imagenesss/1.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/2.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/3.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/4.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/5.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/6.jpg" alt="Extra 1" onclick="openModal(this)">
+      <img src="Imagenesss/7.jpg" alt="Extra 2" onclick="openModal(this)">
+      <img src="Imagenesss/8.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/9.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/10.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/a1.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/a2.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/p.jpg" alt="Extra 1" onclick="openModal(this)">
+      <img src="Imagenesss/s.jpg" alt="Extra 2" onclick="openModal(this)">
+      <img src="Imagenesss/g1.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/g2.jpg" alt="Extra 3" onclick="openModal(this)">
+      <img src="Imagenesss/g3.jpg" alt="Extra 3" onclick="openModal(this)">
+  </div>
+</section>
+
+<!-- Modal para galería -->
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <div id="caption"></div>
+</div>
+
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+  </div>
+
+  <!-- Ubicación -->
+<section id="ubicacion" class="location">
+  <h2>Ubicación</h2>
+  <div class="location-box">
+    <p><strong>Decoraciones Marianita</strong></p>
+    <p>Octeyuco 2000, Jilotepec, México</p>
+    <iframe 
+      src="https://maps.app.goo.gl/m1wVCarWY4Jsdzj89" 
+      width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="testimonials">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <blockquote>"La decoración fue espectacular, todos quedaron encantados." - Ana</blockquote>
+    <blockquote>"Muy profesionales y creativos, recomiendo 100%." - Luis</blockquote>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <form name="clientes" method="POST" data-netlify="true" action="/gracias.html">
+      <input type="hidden" name="form-name" value="clientes" />
+            <label>Nombre: </label>
+            <input type="text" name="nombre" required><br><br>
+            <label>Correo: </label>
+            <input type="email" name="correo" required><br><br>
+            <label>Opinión: </label>
+            <textarea name="mensaje" required></textarea><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+    <p id="formMsg"></p>
+  </section>
+
+  <!-- Footer -->
+<footer>
+    <!-- Contacto -->
+    <div class="footer-contact">
+      <p>
+        <img src="https://www.nicepng.com/png/detail/207-2071241_imagenes-de-logo-de-telefono.png" 
+             alt="Teléfono" width="25">
+        Contacto: 5665899424
+      </p>
+      <p>
+        <img src="https://tse3.mm.bing.net/th/id/OIP.TwESrblIhpd2D8XG5VDz5QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" 
+             alt="WhatsApp" width="25">
+        WhatsApp: 5665899424
+      </p>
+    </div>
+
+    <!-- QR central -->
+    <div class="footer-qr">
+      <img src="Imagenesss/01553f12c8a3a79a66ee329a0300e38d.png" alt="QR WhatsApp" width="120">
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="footer-social">
+      <h3>Síguenos en:</h3>
+      <div class="social-links">
+        <div class="social-item">
+          <a href="https://www.facebook.com/share/18QeXw1QgJ/">
+            <img src="https://thumbs.dreamstime.com/b/kiev-ukraine-march-facebook-icon-social-media-icons-realistic-facebook-app-ui-ux-white-user-interface-kiev-ukraine-march-facebook-215828066.jpg" 
+                 alt="Facebook" width="30">
+            Facebook
+          </a>
+          <img src="Imagenesss/7de2e79cf6d9fc5a5e5256cb0f963d22.png" alt="QR Facebook" width="100">
+        </div>
+        <div class="social-item">
+          <a href="https://www.instagram.com/invites/contact/?igsh=1perqyo9zs46t&utm_content=105z59xd">
+            <img src="https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_1280.jpg" 
+                 alt="Instagram" width="30">
+            Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copy -->
+  <div class="footer-copy">
+    <p>&copy; 2026 Decoraciones Marianita</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
