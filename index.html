@@ -26,7 +26,6 @@
   <section class="hero">
     <h2>Haz tu fiesta inolvidable</h2>
     <p>Decoraciones creativas y personalizadas para cualquier ocasión</p>
-    <button onclick="alert('Solicita tu cotización!')">Cotiza ahora</button>
   </section>
 
   <!-- Servicios -->
@@ -52,17 +51,17 @@
     <div class="package">
       <h3>Básico</h3>
       <p>Decoración sencilla con globos y mesa principal.</p>
-      <p><strong>$2500 MXN</strong></p>
+      <p><strong>$5000 MXN</strong></p>
     </div>
     <div class="package">
       <h3>Premium</h3>
-      <p>Incluye globos, mesa temática y backdrop.</p>5
-      <p><strong>$300 MXN</strong></p>
+      <p>Incluye globos, bases y backdrop.</p>
+      <p><strong>$8000 MXN</strong></p>
     </div>
     <div class="package">
       <h3>Deluxe</h3>
       <p>Decoración completa con iluminación y extras.</p>
-      <p><strong>$5000 MXN</strong></p>
+      <p><strong>$10000 MXN</strong></p>
     </div>
   </section>
 
@@ -75,8 +74,7 @@
       <div class="carousel-slide active"><img src="Imagenesss/1_1.jpg" alt="Evento 1"></div>
       <div class="carousel-slide"><img src="Imagenesss/1_2.jpg" alt="Evento 2"></div>
       <div class="carousel-slide"><img src="Imagenesss/1_3.jpg" alt="Evento 3"></div>
-      <div class="carousel-slide"><img src="Imagenesss/1_3.jpg" alt="Evento 3"></div>
-      <div class="carousel-slide"><img src="Imageness/1.jpg" alt="Evento 3"></div>
+      <div class="carousel-slide"><img src="Imagenesss/2.jpg" alt="Evento 3"></div>
     </div>
 
     <!-- Mini-galería lateral -->
@@ -122,17 +120,21 @@
   </div>
 
   <!-- Ubicación -->
+<!-- Ubicación -->
 <section id="ubicacion" class="location">
-  <h2>Ubicación</h2>
-  <div class="location-box">
-    <p><strong>Decoraciones Marianita</strong></p>
-    <p>Octeyuco 2000, Jilotepec, México</p>
-    <iframe 
-      src="https://maps.app.goo.gl/m1wVCarWY4Jsdzj89" 
-      width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
+  <div class="location-container">
+    <h2>Ubicación</h2>
+    <div class="location-box">
+      <p><strong>Decoraciones Marianita</strong></p>
+      <p>Octeyuco 2000, Jilotepec, México</p>
+      <iframe 
+        src="https://maps.app.goo.gl/t2zcxdLkaoKw5ZN88" 
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
   </div>
 </section>
+
 
 
   <!-- Testimonios -->
@@ -145,16 +147,21 @@
   <!-- Contacto -->
   <section id="contacto" class="contact">
     <h2>Contáctanos</h2>
-    <form name="clientes" method="POST" data-netlify="true" action="/gracias.html">
-      <input type="hidden" name="form-name" value="clientes" />
-            <label>Nombre: </label>
-            <input type="text" name="nombre" required><br><br>
-            <label>Correo: </label>
-            <input type="email" name="correo" required><br><br>
-            <label>Opinión: </label>
-            <textarea name="mensaje" required></textarea><br><br>
-            <button type="submit">Enviar</button>
-        </form>
+<form name="clientes" method="POST" data-netlify="true" action="/gracias.html">
+  <input type="hidden" name="form-name" value="Clientes" />
+  
+  <label>Nombre:</label>
+  <input type="text" name="nombre" required><br><br>
+  
+  <label>Correo:</label>
+  <input type="email" name="correo" required><br><br>
+  
+  <label>Opinión/Cotización:</label>
+  <textarea name="mensaje" required></textarea><br><br>
+  
+  <button type="submit">Enviar</button>
+</form>
+
         
     <p id="formMsg"></p>
   </section>

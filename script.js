@@ -10,21 +10,23 @@ function closeModal() {
 }
 
 // Carrusel
-let currentSlide = 0;
-const slides = document.querySelectorAll(".carousel-slide");
-const totalSlides = slides.length;
 
-document.querySelector(".next").addEventListener("click", () => changeSlide(1));
-document.querySelector(".prev").addEventListener("click", () => changeSlide(-1));
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".carousel-slide");
+    let index = 0;
 
-function changeSlide(direction) {
-  slides[currentSlide].classList.remove("active");
-  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-  slides[currentSlide].classList.add("active");
-}
+    function mostrarSlide(i) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[i].classList.add("active");
+    }
 
-// Auto-play cada 4 segundos
-setInterval(() => changeSlide(1), 4000);
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      mostrarSlide(index);
+    }, 3000); // cada 3 segundos
+  });
+
+
 
 // Modal galería
 function openModal(img) {
